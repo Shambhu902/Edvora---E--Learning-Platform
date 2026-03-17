@@ -1,4 +1,4 @@
-import { BookOpen, ChevronDown, HelpCircle, Lightbulb, MessageCircle, Play, Send, Sparkles, Users } from "lucide-react";
+import { BookOpen, HelpCircle, Lightbulb, Play, Send, Sparkles, Users } from "lucide-react";
 import React, { useState } from "react";
 
 import axios from "axios";
@@ -13,7 +13,6 @@ export default function VirtualTeacher() {
   const [comments, setComments] = useState([]);
   const [newQuestion, setNewQuestion] = useState("");
   const [newComment, setNewComment] = useState("");
-  const [expandedSection, setExpandedSection] = useState("video");
 
   const handleGenerate = async () => {
     if (!topic.trim()) {

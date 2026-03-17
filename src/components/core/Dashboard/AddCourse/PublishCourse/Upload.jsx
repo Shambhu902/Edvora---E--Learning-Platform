@@ -5,7 +5,6 @@ import { useEffect, useState } from "react"
 import { FiUploadCloud } from "react-icons/fi"
 import { Player } from "video-react"
 import { useDropzone } from "react-dropzone"
-import { useSelector } from "react-redux"
 
 export default function Upload({
   name,
@@ -17,7 +16,6 @@ export default function Upload({
   viewData = null,
   editData = null,
 }) {
-  const { course } = useSelector((state) => state.course)
   const [selectedFile, setSelectedFile] = useState(null)
   const [previewSource, setPreviewSource] = useState(
     viewData ? viewData : editData ? editData : ""

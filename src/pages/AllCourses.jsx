@@ -15,7 +15,6 @@ import React, { useEffect, useState } from "react"
 import { IoSparkles } from "react-icons/io5"
 import { apiConnector } from "../services/apiConnector"
 import { courseEndpoints } from "../services/apis"
-import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
 
 const AllCourses = () => {

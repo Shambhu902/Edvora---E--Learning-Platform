@@ -120,7 +120,7 @@
 // export default CourseDetailsCard
 
 import {
-  BsClock,
+  // BsClock,
   BsFillCaretRightFill,
   BsPlayCircle,
   BsShieldCheck,
@@ -155,8 +155,8 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
   const {
     thumbnail: ThumbnailImage,
     price: CurrentPrice,
-    _id: courseId,
-    rating,
+    // _id: courseId,
+    // rating,
     totalStudents,
     totalDuration,
     totalVideos,

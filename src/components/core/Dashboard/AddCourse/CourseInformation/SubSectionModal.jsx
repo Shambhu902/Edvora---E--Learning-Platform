@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { createSubsection, updateSubsection } from '../../../../../services/operations/courseDetailsAPI'
 import { useDispatch, useSelector } from 'react-redux'
 
-import IconBtn from '../../../../common/IconBtn'
-import { RxCross1 } from 'react-icons/rx'
 import { RxCross2 } from 'react-icons/rx'
 import Upload from '../PublishCourse/Upload'
 // import { set } from 'immer/dist/internal.js'

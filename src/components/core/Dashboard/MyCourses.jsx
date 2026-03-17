@@ -46,7 +46,7 @@
 // export default MyCourses
 
 import { FiBook, FiPlus, FiTrendingUp } from 'react-icons/fi'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 import CourseTable from './InstructorCourses/CourseTable';
 import IconBtn from '../../common/IconBtn';
@@ -58,7 +58,6 @@ import { useState } from 'react';
 const MyCourses = () => {
     const { token } = useSelector((state) => state.auth);
     const navigate = useNavigate();
-    const { user } = useSelector((state) => state.profile);
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);
 

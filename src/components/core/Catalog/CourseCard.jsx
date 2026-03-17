@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom'
 
 const CourseCard = ({ course, Height, index }) => {
   const [avgReviewCount, setAvgReviewCount] = useState(0)
-  const [isBookmarked, setIsBookmarked] = useState(false)
+  // const [isBookmarked, setIsBookmarked] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
 
   useEffect(() => {

@@ -191,7 +191,7 @@
 // }
 
 import { Chart, registerables } from "chart.js"
-import { Doughnut, Pie } from "react-chartjs-2"
+import { Doughnut } from "react-chartjs-2"
 import { FiDollarSign, FiUsers } from "react-icons/fi"
 
 import { useState } from "react"

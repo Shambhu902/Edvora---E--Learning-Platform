@@ -68,15 +68,11 @@ import CourseSubsectionAccordion from "./CourseSubSectionAccordion"
 export default function CourseAccordionBar({ course, isActive, handleActive }) {
   const contentEl = useRef(null)
   const [active, setActive] = useState(false)
-  const [sectionHeight, setSectionHeight] = useState(0)
+  // const [sectionHeight, setSectionHeight] = useState(0)
 
   useEffect(() => {
     setActive(isActive?.includes(course._id))
-  }, [isActive])
-
-  useEffect(() => {
-    setSectionHeight(active ? contentEl.current.scrollHeight : 0)
-  }, [active])
+  }, [isActive, course._id])
 
   const lecturesCount = course.Subsection?.length || 0
   const completedLectures = 0 // You can add logic to track completed lectures

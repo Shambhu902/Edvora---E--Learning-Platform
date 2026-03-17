@@ -4,8 +4,7 @@ import { BigPlayButton, Player } from "video-react"
 import {
   FiCheckCircle,
   FiChevronLeft,
-  FiChevronRight,
-  FiPlay
+  FiChevronRight
 } from "react-icons/fi"
 import React, { useEffect, useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"

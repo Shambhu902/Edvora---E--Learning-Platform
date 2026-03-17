@@ -1,5 +1,5 @@
 // Icons
-import { VscSettingsGear, VscSignOut } from "react-icons/vsc";
+import { VscSignOut } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components

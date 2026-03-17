@@ -21,7 +21,7 @@ const VerifyEmail = () => {
       navigate("/signup");
       // TODO: Change this to /signup after testing
     }
-  }, [])
+  }, [signupData, navigate])
 
   useEffect(() => {
     let timer;

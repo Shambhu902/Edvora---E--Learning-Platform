@@ -1,9 +1,8 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { BsLightningFill, BsPatchCheck } from "react-icons/bs"
 import { FiArrowRight, FiGift, FiShield, FiShoppingCart } from "react-icons/fi"
 import { useDispatch, useSelector } from "react-redux"
 
-import IconBtn from "../../../common/IconBtn"
 import { IoRibbon } from "react-icons/io5"
 import { buyCourse } from "../../../../services/operations/StudentFeaturesAPI"
 import { useNavigate } from "react-router-dom"

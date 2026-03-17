@@ -3,14 +3,12 @@ import { deleteSection, deleteSubsection } from '../../../../../services/operati
 import { useDispatch, useSelector } from 'react-redux'
 
 import { AiFillCaretDown } from 'react-icons/ai'
-import { BiDownArrow } from 'react-icons/bi'
 import ConfirmationModal from '../../../../common/ConfirmationModal'
 import { FaPlus } from 'react-icons/fa'
 import { MdEdit } from 'react-icons/md'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { RxDropdownMenu } from 'react-icons/rx'
 import SubsectionModal from './SubSectionModal'
-import { TiPlus } from 'react-icons/ti'
 import { setCourse } from '../../../../../slices/courseSlice'
 
 export default function NestedView({ handleChangeEditSectionName }) {

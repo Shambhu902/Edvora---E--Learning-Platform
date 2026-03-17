@@ -3,14 +3,14 @@ import { createSection, updateSection } from '../../../../../services/operations
 import { setCourse, setEditCourse, setStep } from '../../../../../slices/courseSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { BiRightArrow } from 'react-icons/bi'
+// import { BiRightArrow } from 'react-icons/bi'
 import { IoAddCircleOutline } from 'react-icons/io5'
-import { IoMdAddCircle } from 'react-icons/io'
+// import { IoMdAddCircle } from 'react-icons/io'
 import { MdNavigateNext } from 'react-icons/md'
 import NestedView from './NextedView'
 import toast from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 export default function CourseBuilderForm() {
   const {

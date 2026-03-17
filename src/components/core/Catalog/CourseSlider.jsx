@@ -4,13 +4,13 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/autoplay"
 
-import { Autoplay, FreeMode, Navigation, Pagination } from 'swiper'
+import { Autoplay, Navigation} from 'swiper'
 import { BsFire, BsShieldCheck } from 'react-icons/bs'
 import { FiArrowLeft, FiArrowRight, FiStar } from 'react-icons/fi'
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import CourseCard from './CourseCard'
-import { IoRibbon } from 'react-icons/io5'
+// import { IoRibbon } from 'react-icons/io5'
 import React from 'react'
 import { motion } from 'framer-motion'
 

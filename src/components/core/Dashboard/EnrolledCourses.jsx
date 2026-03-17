@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 import { BiDotsVerticalRounded } from "react-icons/bi"
 import ProgressBar from "@ramonak/react-progress-bar"
@@ -12,18 +12,18 @@ export default function EnrolledCourses() {
 
   const [enrolledCourses, setEnrolledCourses] = useState(null)
 
-  const getEnrolledCourses = async () => {
+  const getEnrolledCourses = useCallback(async () => {
     try {
       const res = await getUserEnrolledCourses(token)
       setEnrolledCourses(res)
     } catch (error) {
       console.log("Could not fetch enrolled courses.")
     }
-  }
+  }, [token])
 
   useEffect(() => {
     getEnrolledCourses()
-  }, [])
+  }, [getEnrolledCourses])
 
   return (
     <div className="space-y-8">

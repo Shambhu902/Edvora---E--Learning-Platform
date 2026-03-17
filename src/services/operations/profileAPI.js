@@ -5,7 +5,7 @@ import { logout } from "./authAPI"
 import { profileEndpoints } from "../apis"
 import { toast } from "react-hot-toast"
 
-const { GET_USER_DETAILS_API, GET_USER_ENROLLED_COURSES_API, GET_INSTRUCTOR_DATA_API } = profileEndpoints
+const { GET_USER_DETAILS_API, GET_USER_ENROLLED_COURSES_API } = profileEndpoints
 
 export function getUserDetails(token, navigate) {
   return async (dispatch) => {

@@ -1,14 +1,13 @@
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 
-import { FaCheck, FaEye, FaRegClock } from "react-icons/fa"
+import { FaCheck, FaEye } from "react-icons/fa"
 import { FiEdit2, FiEye } from "react-icons/fi"
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
 import {
   deleteCourse,
   fetchInstructorCourses,
 } from "../../../../services/operations/courseDetailsAPI"
-import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
 import { COURSE_STATUS } from "../../../../utils/constants"
 import ConfirmationModal from "../../../common/ConfirmationModal"
@@ -19,7 +18,6 @@ import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 export default function CourseTable({ courses, setCourses }) {
-  const dispatch = useDispatch()
   const navigate = useNavigate()
   const { token } = useSelector((state) => state.auth)
   const [loading, setLoading] = useState(false)
