@@ -53,7 +53,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 
 // ---------------- Middlewares ----------------
 app.use(express.json());
@@ -85,8 +85,12 @@ app.get("/", (req, res) => {
 });
 
 // ---------------- Server Setup ----------------
-if (process.env.NODE_ENV !== "production") {
-  app.listen(PORT, () => console.log(`✅ Running locally on port ${PORT}`));
+const isServerlessRuntime =
+  Boolean(process.env.AWS_LAMBDA_FUNCTION_NAME) ||
+  Boolean(process.env.VERCEL);
+
+if (!isServerlessRuntime) {
+  app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 }
 
 // ---------------- Export for Serverless ----------------
