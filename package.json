@@ -13,6 +13,7 @@
     "copy-to-clipboard": "^3.3.3",
     "cors": "^2.8.5",
     "framer-motion": "^12.23.24",
+    "lint": "^0.8.19",
     "lucide-react": "^0.554.0",
     "mongodb": "^6.20.0",
     "mongoose": "^8.19.2",
@@ -46,14 +47,14 @@
   "bugs": {
     "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
   },
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "eject": "react-scripts eject",
-      "backend": "cd backend && npm run dev",
-      "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run backend\"",
-      "lint": "eslint src --ext .js,.jsx"
-    },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "backend": "cd backend && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run backend\"",
+    "lint": "eslint src --ext .js,.jsx"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

@@ -2,10 +2,10 @@
 import axios from "axios";
 
 const rawBase = process.env.REACT_APP_BASE_URL || "http://localhost:4000/api/v1";
-console.log("API BASE URL:", rawBase);
+// console.log("API BASE URL:", rawBase);
 // normalize base URL (remove trailing slash) to avoid URL mismatches
 const BASE_URL = rawBase.replace(/\/+$/, "");
-console.log("Normalized API BASE URL: ",BASE_URL);
+// console.log("Normalized API BASE URL: ",BASE_URL);
 
 export const axiosInstance = axios.create({
   baseURL: BASE_URL,
