@@ -22,26 +22,38 @@ const PORT = process.env.PORT || 4000;
 connect();
 
 // ---------------- ✅ FIXED GLOBAL CORS ----------------
-// ⚠️ REMOVE ALL MANUAL res.header CORS CODE
-const allowedOrigins = [
-  // "http://localhost:3000",
-  // "http://localhost:3000/",
-  "https://edvora-e-learning-platform.vercel.app/", // deployed frontend (Vercel)
-];
+const normalizeOrigin = (value = "") => value.replace(/\/+$/, "");
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        console.log("❌ Blocked CORS origin:", origin);
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  })
-);
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  "http://localhost:3000",
+  "https://edvora-e-learning-platform.vercel.app",
+]
+  .filter(Boolean)
+  .map(normalizeOrigin);
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow server-to-server or tools without Origin header
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    const normalizedOrigin = normalizeOrigin(origin);
+    if (allowedOrigins.includes(normalizedOrigin)) {
+      return callback(null, true);
+    }
+
+    console.log("❌ Blocked CORS origin:", origin);
+    return callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 // ---------------- Middlewares ----------------
 app.use(express.json());
