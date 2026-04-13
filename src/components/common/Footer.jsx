@@ -240,7 +240,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 bg-richblack-800 px-4 py-2 rounded-xl border border-richblack-600">
               <span>Made with</span>
               <FaHeart className="text-red-300  animate-pulse" />
-              <span>by Aryan Singh</span>
+              <span>by Shambhu</span>
             </div>
             <span className="text-richblack-400 text-sm">© 2024 Edvora. All rights reserved.</span>
           </div>
